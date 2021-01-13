@@ -6,6 +6,8 @@ description: >-
 
 # কালেকশন \(collection\) কি?
 
+![](../.gitbook/assets/laravel-collection.png)
+
 যেকোন অ্যারে কে `collect()` হেল্পার দিয়ে খুব সহজেই কালেকশন এ রুপান্তর করা যায়। যেমন,
 
 ```php
@@ -32,6 +34,10 @@ shuffle(arsort(array_unique(array_merge($array1,$array2))));
 ```
 
 এত্তগুলো **ব্র্যাকেট!!** আচ্ছা এবার যদি আরেকটু কমপ্লেক্স করে লিখতে বলা হয়, ১০ কিংবা তারও বেশি ব্র্যাকেট!  কি! খেই হারিয়ে ফেললেন? পড়তেও দাঁতমুখ ভাঙ্গার যোগার না?
+
+![](../.gitbook/assets/bigstock-angry-crazy-woman-with-rage-ex-72129889.jpg)
+
+
 
 এবার তাহলে চলুন কালেকশন দিয়ে করে দেখি,
 
