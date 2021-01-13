@@ -54,7 +54,7 @@ array_merge ( $array ,$array2 );// return a new array
 array_push ($array ,$value); // not return a new array
 ```
 
-লারাভেল কালেকশন কাজটি অনেক সহজ করে দিয়েছে। খুবই সিম্পল ও সহজ সমাধান
+লারাভেল কালেকশন দিয়ে খুবই সিম্পল ও সহজভাবে কাজটি করে ফেলা যায়।
 
 ```php
 collect($array)
@@ -62,5 +62,58 @@ collect($array)
     ->map($callback)
     ->merge($array2)
     ->push($value)
+```
+
+আবার কী দিয়ে লারাভেল কালেকশন অ্যারে প্রসেসিং এ অনেক সহজ। এবং  **মাল্টি লেয়ার অ্যারের ডিপ লেভেলও খুব সহজভাবে এক্সেস করা যায়**, যেখানে পিএইচপি কনভেনশনাল অ্যারে এপিই এর বেশিরভাগই শুধুমাত্র টপ লেয়ারে এক্সেস করতে পারে। যেমন,
+
+```php
+$array=[
+    ["id"=>1,"product"=>['name'=>"Apple"]],
+    ["id"=>2,"product"=>['name'=>"Watermelon"]],
+    ["id"=>3,"product"=>['name'=>"Banana"]],
+
+];
+
+$result= collect($array)->sortBy("product.name");
+
+/*
+Illuminate\Support\Collection {#3545 ▼
+  #items: array:3 [▼
+    0 => array:2 [▼
+      "id" => 1
+      "product" => array:1 [▼
+        "name" => "Apple"
+      ]
+    ]
+    ...........
+  ]
+}
+
+*/
+```
+
+লারাভেল কালেকশন **'ম্যাক্রোয়েবল' ।**এর মানে হলো, আপনি চাইলেই খুব সহজেই কালেকশন যেকোন মেথড যোগ করতে পারবেন। যেমন, কোন অ্যারের সবগুলো ভ্যালুকে যদি বড় হাতের অক্ষরে দেখতে চান তাহলে,
+
+```php
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
+
+Collection::macro('toUpper', function () {
+    return $this->map(function ($value) {
+        return Str::upper($value);
+    });
+});
+
+$collection = collect(['first', 'second']);
+
+$upper = $collection->toUpper();
+
+// ['FIRST', 'SECOND']
+```
+
+আরও একটি মজার তথ্য দিয়ে রাখি, আপনি চাইলে কালেকশন ক্লাসটি লারাভেল এর বাইরেও ব্যবহার করতে পারবেন। 
+
+```php
+composer require illuminate/support
 ```
 
