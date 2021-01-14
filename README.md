@@ -14,5 +14,7 @@ description: >-
 php artisan serve
 ```
 
+[g2.com](https://www.g2.com/compare/laravel-vs-codeigniter-vs-symfony-vs-cakephp) এ পিএইচপির ফ্রেমওয়ার্কগুলোর তুলনা দেখা যাক এবার,
 
+![](.gitbook/assets/screenshot-2021-01-14-172516.jpg)
 
