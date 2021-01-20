@@ -5,5 +5,5 @@
 ## কালেকশন <a id="collection"></a>
 
 * [কালেকশন \(collection\) কি?](collection/what-is-collextion.md)
-* [কালেকশন মেথড](collection/undefined.md)
+* [পর্ব ১ঃ কালেকশন মেথড](collection/collection-method-1.md)
 
