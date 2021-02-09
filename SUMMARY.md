@@ -7,3 +7,7 @@
 * [কালেকশন \(collection\) কি?](collection/what-is-collextion.md)
 * [পর্ব ১ঃ কালেকশন মেথড](collection/collection-method-1.md)
 
+---
+
+* [লারাভেল Traits](traits.md)
+
