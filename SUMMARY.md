@@ -9,5 +9,5 @@
 
 ---
 
-* [লারাভেল Traits কেন লিখবো?](traits.md)
+* [লারাভেল-এ Traits কেন লিখবো?](traits.md)
 
