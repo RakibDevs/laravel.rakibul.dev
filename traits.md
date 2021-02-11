@@ -6,7 +6,19 @@ description: >-
 
 # লারাভেল-এ Traits কেন লিখবো?
 
-
+```php
+<?php
+ 
+namespace App\Traits;
+ 
+trait StoreImage {
+ 
+    public function storeImage(Request $request) {
+       //
+    }
+ 
+}
+```
 
 পিএইচপি তে Traits হচ্ছে কিছু মেথডের কালেকশন যা পুনরায় ব্যবহার করা যায়।
 
