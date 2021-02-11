@@ -6,6 +6,8 @@ description: >-
 
 # লারাভেল-এ Traits কেন লিখবো?
 
+ধরুন, 
+
 ```php
 <?php
  
